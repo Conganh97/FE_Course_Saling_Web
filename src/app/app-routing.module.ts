@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {AdminDashbroadComponent} from "./admin/admin-dashbroad/admin-dashbroad.component";
+import {UserLoginComponent} from "./auth/user-login/user-login.component";
+import {UserRegisterComponent} from "./auth/user-register/user-register.component";
 
 const routes: Routes = [
   {
@@ -13,6 +16,14 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then(module => module.UserModule)
+  },
+  {
+    path: 'login',
+    component: UserLoginComponent,
+  },
+  {
+    path: 'register',
+    component: UserRegisterComponent,
   },
 ];
 

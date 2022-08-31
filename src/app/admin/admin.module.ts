@@ -10,16 +10,20 @@ import { NavbartopComponent } from './navbartop/navbartop.component';
 
 
 @NgModule({
-  declarations: [
-    AdminDashbroadComponent,
-    CourseCategoryComponent,
+    declarations: [
+        AdminDashbroadComponent,
+        CourseCategoryComponent,
 
-    NavbarleftComponent,
-    NavbartopComponent
+        NavbarleftComponent,
+        NavbartopComponent
+    ],
+  exports: [
+    NavbartopComponent,
+    NavbarleftComponent
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        AdminRoutingModule
+    ]
 })
 export class AdminModule { }
