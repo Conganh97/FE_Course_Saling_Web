@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {AdminDashbroadComponent} from "./admin-dashbroad/admin-dashbroad.component";
 import {CourseCategoryComponent} from "./course-category/course-category.component";
+import {CourseDetailComponent} from "./course-detail/course-detail.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'courseCategory',
     component: CourseCategoryComponent,
+  },
+  {
+    path: 'courseDetail',
+    component: CourseDetailComponent,
   },
 ];
 

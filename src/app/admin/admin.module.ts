@@ -7,6 +7,7 @@ import { CourseCategoryComponent } from './course-category/course-category.compo
 
 import { NavbarleftComponent } from './navbarleft/navbarleft.component';
 import { NavbartopComponent } from './navbartop/navbartop.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavbartopComponent } from './navbartop/navbartop.component';
         CourseCategoryComponent,
 
         NavbarleftComponent,
-        NavbartopComponent
+        NavbartopComponent,
+        CourseDetailComponent
     ],
   exports: [
     NavbartopComponent,

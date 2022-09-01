@@ -25,6 +25,9 @@ export class ScriptService {
     return Promise.all(promises);
   }
 
+  get(){
+    console.log(ScriptStore)
+  }
   loadScript(name: string) {
     return new Promise((resolve, reject) => {
       //resolve if already loaded

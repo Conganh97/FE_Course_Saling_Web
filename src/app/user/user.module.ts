@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarleftComponent } from './navbarleft/navbarleft.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditComponent } from './edit/edit.component';
+import { DeleteAccComponent } from './delete-acc/delete-acc.component';
 
 
 @NgModule({
@@ -19,7 +20,12 @@ import { EditComponent } from './edit/edit.component';
     HeaderComponent,
     NavbarleftComponent,
     FooterComponent,
-    EditComponent
+    EditComponent,
+    DeleteAccComponent
+  ],
+  exports: [
+    NavbartopComponent,
+    NavbarleftComponent
   ],
   imports: [
     CommonModule,

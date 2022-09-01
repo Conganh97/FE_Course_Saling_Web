@@ -4,7 +4,7 @@ interface ScriptStore {
 }
 
 export const ScriptStore: ScriptStore[] = [
-  {name: 'bootstrap', src: 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js'},
+  {name: 'bootstrap', src: '../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js'},
   {name: 'tiny-slider', src: 'assets/vendor/tiny-slider/tiny-slider.js'},
   {name: 'glightbox', src: 'assets/vendor/glightbox/js/glightbox.js'},
   {name: 'purecounter_vanilla', src: 'assets/vendor/purecounterjs/dist/purecounter_vanilla.js'},

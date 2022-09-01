@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ScriptService} from "../../script.service";
 
 @Component({
@@ -17,5 +17,7 @@ export class ShowhomeComponent implements OnInit {
       console.log('script loaded ', data);
     }).catch(error => console.log(error));
   }
+
+
 
 }
