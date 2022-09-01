@@ -7,25 +7,22 @@ import { CourseCategoryComponent } from './course-category/course-category.compo
 
 import { NavbarleftComponent } from './navbarleft/navbarleft.component';
 import { NavbartopComponent } from './navbartop/navbartop.component';
+import {HttpClientModule} from "@angular/common/http";
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 
 @NgModule({
-    declarations: [
-        AdminDashbroadComponent,
-        CourseCategoryComponent,
+  declarations: [
+    AdminDashbroadComponent,
+    CourseCategoryComponent,
 
-        NavbarleftComponent,
-        NavbartopComponent,
-        CourseDetailComponent
-    ],
-  exports: [
-    NavbartopComponent,
-    NavbarleftComponent
+    NavbarleftComponent,
+    NavbartopComponent
   ],
-    imports: [
-        CommonModule,
-        AdminRoutingModule
-    ]
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    HttpClientModule
+  ]
 })
 export class AdminModule { }
