@@ -28,8 +28,6 @@ export class ScriptService {
   loadScript(name: string) {
     return new Promise((resolve, reject) => {
       //resolve if already loaded
-      console.log(this.scripts)
-      console.log(name)
       if (this.scripts[name].loaded) {
         resolve({script: name, loaded: true, status: 'Already Loaded'});
       }

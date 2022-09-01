@@ -7,6 +7,7 @@ import { CourseCategoryComponent } from './course-category/course-category.compo
 
 import { NavbarleftComponent } from './navbarleft/navbarleft.component';
 import { NavbartopComponent } from './navbartop/navbartop.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NavbartopComponent } from './navbartop/navbartop.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
