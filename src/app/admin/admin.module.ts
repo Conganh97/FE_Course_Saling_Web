@@ -8,21 +8,36 @@ import { CourseCategoryComponent } from './course-category/course-category.compo
 import { NavbarleftComponent } from './navbarleft/navbarleft.component';
 import { NavbartopComponent } from './navbartop/navbartop.component';
 import {HttpClientModule} from "@angular/common/http";
-import { CourseDetailComponent } from './course-detail/course-detail.component';
-
-
+import { CoursedetailComponent } from './coursedetail/coursedetail.component';
+import { CreateCourseComponent } from './create-course/create-course.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../../environments/environment";
+import { AdminInstructorComponent } from './admin-instructor/admin-instructor.component';
+import { AdminCourseEditComponent } from './admin-course-edit/admin-course-edit.component';
+import { CreateLessonComponent } from './create-lesson/create-lesson.component';
 @NgModule({
   declarations: [
     AdminDashbroadComponent,
     CourseCategoryComponent,
-
     NavbarleftComponent,
-    NavbartopComponent
+    NavbartopComponent,
+    CoursedetailComponent,
+    CreateCourseComponent,
+    AdminInstructorComponent,
+    AdminCourseEditComponent,
+    CreateLessonComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ]
 })
 export class AdminModule { }

@@ -3,6 +3,7 @@ import {ScriptService} from "../../script.service";
 import {Course} from "../../model/Course";
 import {AdminCourseService} from "../service/admin-course.service";
 import {Page} from "../../model/Page";
+import {getAll} from "@angular/fire/remote-config";
 
 @Component({
   selector: 'app-course-category',
@@ -31,7 +32,6 @@ export class CourseCategoryComponent implements OnInit {
     if (page >= 0 && page < this.page.totalPages) {
       this.courseService.getAll(page).subscribe((data) => {
         this.page = data
-        console.log(this.page)
         this.course = this.page.content
       })
     }
@@ -42,8 +42,16 @@ export class CourseCategoryComponent implements OnInit {
   }
 
   search(input: string) {
-    this.courseService.search(input).subscribe((data) => {
-      this.course = data
-    })
+    // this.courseService.search(input).subscribe((data) => {
+    //   this.course = data
+    // })
+  }
+  disable(id:number){
+    this.courseService.disable(id).subscribe()
+
+  }
+  activated(id:number){
+    this.courseService.activated(id).subscribe()
+
   }
 }

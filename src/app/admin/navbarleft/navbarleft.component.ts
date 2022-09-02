@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ScriptService} from "../../script.service";
+import {AdminCourseService} from "../service/admin-course.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-navbarleft',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarleftComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private script: ScriptService) {
   }
 
+  ngOnInit(): void {
+    this.script.load('bootstrap', 'tiny-slider',
+      'glightbox', 'purecounter_vanilla', 'functions').then(data => {
+    }).catch(error => console.log(error));
+  }
 }
