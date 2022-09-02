@@ -12,7 +12,20 @@ export const ScriptStore: ScriptStore[] = [
   {name:"overlayscrollbars",src:"assets/vendor/overlay-scrollbar/js/overlayscrollbars.min.html"},
   {name:"OverlayScrollbars.css",src:"assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css"},
   {name:"apexcharts.css", src:"assets/vendor/apexcharts/css/apexcharts.css"},
-  {name:"apexcharts.min.js" , src:"assets/vendor/apexcharts/js/apexcharts.min.js"}
+  {name:"apexcharts.min.js" , src:"assets/vendor/apexcharts/js/apexcharts.min.js"},{
+  name:"awesome",src:"assets/vendor/font-awesome/css/all.min.css"
+  },{
+  name:"bootstrap-icons",src:"assets/vendor/bootstrap-icons/bootstrap-icons.css"
+  },{
+  name:"choices",src:"assets/vendor/choices/css/choices.min.css"
+  },
+  {name:'quill',src:"assets/vendor/quill/css/quill.snow.css"},{
+  name:"stepper",src:"assets/vendor/stepper/css/bs-stepper.min.css"
+  },{
+  name:'aos',src:'assets/vendor/aos/aos.css'
+  },{
+  name:'choices.min.js',src:'assets/vendor/choices/js/choices.min.js'
+  }
 ];
 
 

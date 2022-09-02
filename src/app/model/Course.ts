@@ -7,6 +7,7 @@ export class Course{
   priceCourse!:number
   imgCourse!:string
   enrolled!:number
+  shortDescription!:string
   descriptionCourse!:string
   timeCourse!:number
   instructor!:Instructor

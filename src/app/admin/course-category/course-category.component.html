@@ -138,7 +138,7 @@
       <div class="row mb-3">
         <div class="col-12 d-sm-flex justify-content-between align-items-center">
           <h1 class="h3 mb-2 mb-sm-0">All Course<span class="badge bg-orange bg-opacity-10 text-orange">245</span></h1>
-          <a href="instructor-create-course.html" class="btn btn-sm btn-primary mb-0">Create a Course</a>
+          <a href="/admin/createCourse" class="btn btn-sm btn-primary mb-0">Create a Course</a>
         </div>
       </div>
 
@@ -194,7 +194,8 @@
                     </div>
                     <!-- Title -->
                     <h6 class="table-responsive-title mb-0 ms-2">
-                      <a href="#" class="stretched-link">{{c.nameCourse}}</a>
+                      <a *ngIf="c.statusCourse==true" [href]="'/admin/courseDetail/'+c.idCourse" class="stretched-link">{{c.nameCourse}}</a>
+                      <a *ngIf="c.statusCourse==false" style="color: red" [href]="'/admin/courseDetail/'+c.idCourse" class="stretched-link">{{c.nameCourse}}</a>
                     </h6>
                   </div>
                 </td>
@@ -228,8 +229,9 @@
 
                 <!-- Table data -->
                 <td>
-                  <a href="#" class="btn btn-sm btn-success me-1 mb-1 mb-md-0">Edit</a>
-                  <button class="btn btn-sm btn-danger mb-0">Delete</button>
+                  <a [href]="'/admin/editCourse/'+c.idCourse" class="btn btn-sm btn-success me-1 mb-1 mb-md-0">Edit</a>
+                  <button *ngIf="c.statusCourse==true" class="btn btn-sm btn-danger mb-0" (click)="disable(c.idCourse)">Disable</button>
+                  <button *ngIf="c.statusCourse==false" class="btn btn-sm btn-primary mb-0" (click)="activated(c.idCourse)">Activated</button>
                 </td>
               </tr>
               </tbody>
