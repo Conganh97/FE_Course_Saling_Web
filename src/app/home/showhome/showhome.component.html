@@ -1302,7 +1302,8 @@
             <div class="card bg-transparent" *ngFor=" let t of instructor">
               <div class="position-relative">
                 <!-- Image -->
-                <img src="assets/images/instructor/images.jpg"style="width: 300px; height: 300px" class="card-img" alt="course image">
+                <img src="{{t.avatarInstructor}}"style="width: 300px; height: 300px" class="card-img" alt="course image">
+
                 <!-- Overlay -->
                 <div class="card-img-overlay d-flex flex-column p-3">
                   <div class="w-100 mt-auto text-end">
@@ -1320,7 +1321,7 @@
                 <h5 class="card-title"><a href="#">{{t.dateOfBirthInstructor}}</a></h5>
                 <h5 class="card-title"><a href="#">{{t.phoneInstructor}}</a></h5>
                 <h5 class="card-title"><a href="#">{{t.experience}}</a></h5>
-                <h5 class="card-title"><a href="#">{{t.avatarInstructor}}</a></h5>
+<!--                <h5 class="card-title"><a href="#">{{t.avatarInstructor}}</a></h5>-->
                 <p class="mb-2"></p>
                 <!-- Rating -->
                 <ul class="list-inline hstack justify-content-center">
