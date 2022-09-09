@@ -11,6 +11,7 @@ export class AdminInstructorService {
 
   constructor(private http:HttpClient) { }
   getAll(): Observable<Instructor[]> {
-    return this.http.get<Instructor[]>(API_URL + '/admin/instructor');
+    return this.http.get<Instructor[]>(  'http://localhost:8081/instructors');
   }
+
 }
